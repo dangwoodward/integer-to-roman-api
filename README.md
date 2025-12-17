@@ -126,4 +126,4 @@ Expected response:
 - For containerized deployment, Docker must be installed and running.
 - Use Java 25 and Maven 3.x to avoid compatibility issues.
 - The project is packaged as a JAR and can be deployed anywhere a Java 25 runtime is available.
-- Learn more about Spring Boot 4.0.0: [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/4.0.0/reference/htmlsingle/)
+- Learn more about Spring Boot 4.0.0: [Spring Boot Documentation](https://docs.spring.io/spring-boot/documentation.html)
