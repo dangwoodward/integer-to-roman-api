@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Application {
 
+    // homepage of the spring boot application
     @RequestMapping("/")
     public String home() {
         return "HomePage";

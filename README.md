@@ -1,6 +1,32 @@
 # Integer to Roman API
 
-This is a Spring Boot API that converts integers to Roman numerals. The API exposes a REST endpoint that accepts an integer and returns the corresponding Roman numeral.
+This is a Spring Boot API that converts integers to Roman numerals. The API exposes a REST endpoint that accepts an integer and returns the corresponding Roman numeral. It was designed using Java 25 and Spring Boot 4.0.0, with unit testing, and Docker containerization in mind.
+
+## Engineering and Testing Methodology
+
+### Engineering Approach
+
+1. **Requirements Analysis**
+
+   - Core functionality: convert integers to Roman numerals.
+   - Input constraints: 1–255.
+
+2. **Design**
+
+   - Spring Boot REST API with endpoint `/romannumeral?query=<integer>`.
+   - Plan for JAR packaging and Docker containerization.
+
+### Testing Strategy
+
+1. **Unit Testing**
+
+   - Validate error cases ( 0 or negative input)
+   - Ensure the application returns meaningful error messages and does not crash.
+
+2. **Continuous Integration (Future Iteration)**
+
+   - GitHub Actions to run `mvn clean test` on every push or pull request.
+   - Build Docker images automatically after successful tests.
 
 ## Technologies
 
