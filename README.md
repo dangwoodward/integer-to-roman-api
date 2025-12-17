@@ -58,17 +58,29 @@ docker --version
 
 ## Getting Started
 
-### Build & Run Unit Tests
+### Run Unit Tests
 
 Run the following command to clean the project and execute unit tests:
+
+> Note: This command **does not create a JAR file**, it only runs your unit tests.
 
 ```bash
 mvn clean test
 ```
 
+### Build JAR File
+
+To generate the JAR file that can be run or used in a Docker image, use:
+
+```bash
+mvn clean package
+```
+
+The JAR will be created in the `target/` directory, e.g.: `target/integer-to-roman-api-0.0.1-SNAPSHOT.jar`
+
 ### Build Docker Image
 
-This command builds a Docker image named `integer-to-roman-api-app`:
+This command builds a Docker image named `integer-to-roman-api-app` using the generated JAR:
 
 ```bash
 docker build -t integer-to-roman-api-app:latest .
