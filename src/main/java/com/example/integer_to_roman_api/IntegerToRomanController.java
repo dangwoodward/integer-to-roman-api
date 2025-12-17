@@ -29,7 +29,7 @@ public class IntegerToRomanController {
 
     public Boolean valueCheck(int num) {
 
-        if (num < 0 || num > 255) {
+        if (num <= 0 || num > 255) {
             return false;
         }
 
