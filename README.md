@@ -36,6 +36,13 @@ This is a Spring Boot API that converts integers to Roman numerals. The API expo
 - Jar packaging
 - Docker (for containerization)
 
+## Logging
+
+- All logs are automatically written to the **`logs/` folder** in the project root.
+- The **root logger** logs general info, warnings, and errors, while the API package is configured for **DEBUG level** logs, including details of integer-to-Roman conversions.
+- Default log file: `logs/app.log`.
+- Logs include timestamps, log levels, and detailed information for requests, validations, and conversion operations.
+
 ## Prerequisites
 
 Before running this project, ensure you have the following installed:
@@ -153,3 +160,11 @@ Expected response:
 - Use Java 25 and Maven 3.x to avoid compatibility issues.
 - The project is packaged as a JAR and can be deployed anywhere a Java 25 runtime is available.
 - Learn more about Spring Boot 4.0.0: [Spring Boot Documentation](https://docs.spring.io/spring-boot/documentation.html)
+
+## Future Improvements
+
+- CI/CD pipelines can be configured using GitHub Actions or GitLab CI to automatically run unit tests and build Docker images on every push or merge request.
+
+- The Docker image is ready to be deployed on Kubernetes or AWS ECS for scalable production deployment.
+
+- Integration with Grafana would allow real-time visualization of logs from the logs/app.log file for monitoring API usage, errors, and performance metrics.
