@@ -14,6 +14,7 @@ This is a Spring Boot API that converts integers to Roman numerals. The API expo
 2. **Design**
 
    - Spring Boot REST API with endpoint `/romannumeral?query=<integer>`.
+   - also supports `'/romannumeral?min=<integer>&max=<integer>`.
    - Plan for JAR packaging and Docker containerization.
 
 ### Testing Strategy
@@ -137,6 +138,8 @@ mvn spring-boot:run
 
 Once running, the API is accessible at:
 `http://localhost:8080/romannumeral?query=<integer>`
+and
+`http://localhost:8080/romannumeral?min=<integer>&max=<integer>`
 
 ### Example Request
 
@@ -150,6 +153,19 @@ Expected response:
 {
   "input": "1",
   "output": "I"
+}
+```
+
+```bash
+curl http://localhost:8080/romannumeral?min=1\&max=2
+```
+
+```json
+{
+  "conversions": [
+    { "input": "1", "output": "I" },
+    { "input": "2", "output": "II" }
+  ]
 }
 ```
 
