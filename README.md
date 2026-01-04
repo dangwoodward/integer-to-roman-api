@@ -184,3 +184,5 @@ curl http://localhost:8080/romannumeral?min=1\&max=2
 - The Docker image is ready to be deployed on Kubernetes or AWS ECS for scalable production deployment.
 
 - Integration with Grafana would allow real-time visualization of logs from the logs/app.log file for monitoring API usage, errors, and performance metrics.
+
+- When certain erros occur on the api, then email or add webhook to slack to notify team
